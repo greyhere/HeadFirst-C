@@ -21,6 +21,12 @@ int main()
         val = atoi(card_name);
     }
     
-    printf("The card value is: %i\n", val);
+    /* Check if the value is 3 to 6 */
+    if ((val > 2) && (val < 7)) {
+        puts("Card has gone up");
+    /* Otherwise check if the card was 10, J, Q, or K */
+    } else if (val == 10) {
+        puts("Card has gone down");
+    }
     return 0;
 }
